@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<!--dsplay: 
+	block element:takes emtire line  by default
+	inline-block element: takes as much space as need
+	inline element: appears in a line of text  e.g. <strong></strong> -->
+<!--<div>(dividion): a box(container) (block element by default)-->
+<!--nested layout: combination of horizontal layouot and vertical layout, we can get any laypout.  -->
+<!--CSS grid for videos -->
+<!-- flexbox is like CSS grid, but more flexible 
+	need the minimum space-->
+<!-- CSS specificity: more specific, higher priority -->
+<!-- semantic element (header, nav, main, ..): like div, but have meaning to screen reader -->
+<html>
+	<head>
+		<title>Fake Youtube</title>
+		<!-- font  -->
+		<link rel="preconnect" href="https://fonts.googleapis.com">		
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+		<!-- general -->
+		<link rel="stylesheet" href="styles/general.CSS">
+		<!-- video -->
+		<link rel="stylesheet" href="styles/video.CSS">
+		<!-- header -->
+		<link rel="stylesheet" href="styles/header.CSS">
+		<!-- expansion bar -->
+		<link rel="stylesheet" href="styles/expansion.CSS">
+		<!-- sidebar -->
+		<link rel="stylesheet" href="styles/sidebar.CSS">
+	</head>
+	<body>
+		<!-- header -->
+		<header class="header">
+			<!-- menu and logo -->
+			<div class="left-section">
+				<img class="hamburger-menu" src="./channel-pictures/icon/hamburger-menu.svg">
+				<a href="https://www.youtube.com/">
+				<img class="youtube-logo" src="./channel-pictures/icon/youtube-logo.svg">
+				</a>
+			</div>
+			<!--search and mic -->
+			<div class="middle-section">
+				<input class="search-bar" type="text" placeholder="Search">  <!-- another box: checkbox -->
+				<button class="search-button">
+					<img class="search-icon" src="./channel-pictures/icon/search.svg">
+					<div class="tooltip">Search</div>
+				</button>
+				<!-- put position absolute inside position relative -->
+				<button class="voice-search-button">
+					<img class="voice-search-icon" src="./channel-pictures/icon/voice-search-icon.svg">
+					<div class="tooltip">Search with your voice</div>
+				</button>
+			</div>
+			<!-- create, notification, profile -->
+			<div class="right-section">
+				<div class="upload-icon-container">
+					<img class="upload-icon" src="./channel-pictures/icon/upload.svg">
+					<div class="tooltip">Create</div>
+				</div>
+				<div class="notifications-icon-container">
+					<img class="notifications-icon" src="./channel-pictures/icon/notifications.svg">
+					<div class="notifications-count">9</div>
+					<div class="tooltip">Notifications</div>
+				</div>
+				<div class="user-container">
+					<img class="current-user-picture" src="./channel-pictures/icon/me.jpg">
+				</div>
+			</div>
+		</header>
+		<!-- expansion bar -->
+		<div class="expansion-bar">
+			<button class="expand-button-s">All</button>
+			<button class="a">Computer programming</button>
+			<button class="b">AI</button>
+			<button class="c">T-ara</button>
+			<button class="d">Computer hardware</button>
+			<button class="e">MIT OpenCourseWare</button>
+			<button class="f">Comedy</button>
+			<button class="g">Music</button>
+			<button class="h">Recently uploaded</button>
+			<button class="i">Watched</button>
+			<button class="j">New to you</button>
+		</div>
+		<!-- sidebar -->
+		<nav class="sidebar">
+			<div class="sidebar-link">
+				<img src="./channel-pictures/side_icon/home.svg">
+				<div>Home</div>
+			</div>
+			<div class="sidebar-link">
+				<img src="./channel-pictures/side_icon/explore.svg">
+				<div>Explore</div>
+			</div>
+			<div class="sidebar-link">
+				<img src="./channel-pictures/side_icon/subscriptions.svg">
+				<div>Subscriptions</div>
+			</div>
+			<div class="sidebar-link">
+				<img src="./channel-pictures/side_icon/originals.svg">
+				<div>Originals</div>
+			</div>
+			<div class="sidebar-link">
+				<img src="./channel-pictures/side_icon/youtube-music.svg">
+				<div>Youtube Music</div>
+			</div>
+			<div class="sidebar-link">
+				<img src="./channel-pictures/side_icon/library.svg">
+				<div>Library</div>
+			</div>
+		</nav>
+
+		<!-- dev: if out dev not in one line (</dev><dev>), then there will be some space between these box -->
+		<!--videos-->
+		<main>
+			<section class="video-grid">
+				<a href="https://www.youtube.com/watch?v=Hx1QyAFEOB0">
+				<div class="video-preview">
+					<div class="hp720-row">
+						<img class="hp720" src="channel-pictures/hq720.webp">  <!-- video cover -->
+						<div class="video-time">3:33</div>
+					</div>
+					<div class="video-info-grid">
+						<div class="channel-picture">
+							<img class="profile-picture" src="channel-pictures/unnamed.jpg">
+						</div>
+						<div class="video-info">
+							<p class="video-title">티아라(T-ARA) - 내 이름은(What's My Name) 교차편집(stage mix)</p>
+							<p class="video-author">tun김교차</p>
+							<p class="video-stats">xx views &#183; xx years ago</p>
+						</div>
+					</div>
+				</div>
+				</a>
+				<a href="https://www.youtube.com/watch?v=y4Yl8kThr9o">
+				<div class="video-preview">
+					<div class="hp720-row">
+						<img class="hp720" src="channel-pictures/hq720 (1).webp">  <!-- video cover -->
+						<div class="video-time">3:21</div>
+					</div>
+					<div class="video-info-grid">
+						<div class="channel-picture">
+							<img class="profile-picture" src="channel-pictures/channels4_profile.jpg">
+						</div>
+						<div class="video-info">
+							<p class="video-title">170909 티아라(T-ARA) - Lovey Dovey (러비더비) + Roly Poly (롤리폴리) [INK CONCERT] 4K 직캠 by 비몽</p>
+							<p class="video-author">비몽</p>
+							<p class="video-stats">xx views &#183; xx years ago</p>
+						</div>
+					</div>
+				</div>
+				</a>
+				<a href="https://www.youtube.com/watch?v=uikbtpVZS2s&t=9s">
+				<div class="video-preview">
+					<div class="hp720-row">
+						<img class="hp720" src="channel-pictures/hqdefault (1).webp">  <!-- video cover -->
+						<div class="video-time">1:19:39</div>
+					</div>
+					<div class="video-info-grid">
+						<div class="channel-picture">
+							<img class="profile-picture" src="channel-pictures/unnamed (1).jpg">
+						</div>
+						<div class="video-info">
+							<p class="video-title">01 - Relational Model & Relational Algebra (CMU Intro to Database Systems / Fall 2022)</p>
+							<p class="video-author">CMU Database Group</p>
+							<p class="video-stats">xx views &#183; xx years ago</p>
+						</div>
+					</div>
+				</div>
+				</a>
+				<a href="https://www.youtube.com/watch?v=Cx5Z-OslNWE&t=3s">
+				<div class="video-preview">
+					<div class="hp720-row">
+						<img class="hp720" src="channel-pictures/hqdefault.jpg">  <!-- video cover -->
+						<div class="video-time">7:04</div>
+					</div>
+					<div class="video-info-grid">
+						<div class="channel-picture">
+							<img class="profile-picture" src="channel-pictures/channels4_profile (1).jpg">
+						</div>
+						<div class="video-info">
+							<p class="video-title">Course Introduction of 18.065 by Professor Strang</p>
+							<p class="video-author">MIT OpenCourseWare</p>
+							<p class="video-stats">xx views &#183; xx years ago</p>
+						</div>
+					</div>
+				</div>
+				</a>
+				<a href="https://www.youtube.com/watch?v=71wQeC3ohug">
+				<div class="video-preview">
+					<div class="hp720-row">
+						<img class="hp720" src="channel-pictures/hq720 (3).webp">  <!-- video cover -->
+						<div class="video-time">3:37</div>
+					</div>
+					<div class="video-info-grid">
+						<div class="channel-picture">
+							<img class="profile-picture" src="channel-pictures/unnamed (3).jpg">
+						</div>
+						<div class="video-info">
+							<p class="video-title">[Special M COUNTDOWN in CHINA] T-ARA(티아라) _ INTRO + So Crazy(완전 미쳤네) 160602 EP.476</p>
+							<p class="video-author">Mnet K-POP</p>
+							<p class="video-stats">xx views &#183; xx years ago</p>
+						</div>
+					</div>
+				</div>
+				</a>
+				<a href="https://www.youtube.com/watch?v=sX1Y2JMK6g8">
+				<div class="video-preview">
+					<div class="hp720-row">
+						<img class="hp720" src="channel-pictures/hq720 (2).webp">  <!-- video cover -->
+						<div class="video-time">4:27</div>
+					</div>
+					<div class="video-info-grid">
+						<div class="channel-picture">
+							<img class="profile-picture" src="channel-pictures/channels4_profile (2).jpg">
+						</div>
+						<div class="video-info">
+							<p class="video-title">SpaceX Falcon Heavy- Elon Musk's Engineering Masterpiece</p>
+							<p class="video-author">Spaceflight TV</p>
+							<p class="video-stats">xx views &#183; xx years ago</p>
+						</div>
+					</div>
+				</div>
+				</a>
+				<a href="https://www.youtube.com/watch?v=ifqqp7kH_tQ&t=238s">
+				<div class="video-preview">
+					<div class="hp720-row">
+						<img class="hp720" src="channel-pictures/hqdefault (2).webp">  <!-- video cover -->
+						<div class="video-time">12:23</div>
+					</div>
+					<div class="video-info-grid">
+						<div class="channel-picture">
+							<img class="profile-picture" src="channel-pictures/unnamed (2).jpg">
+						</div>
+						<div class="video-info">
+								<p class="video-title">HOOD OLYMPICS 3</p>
+							<p class="video-author">RDCworld1</p>
+							<p class="video-stats">xx views &#183; xx years ago</p>
+						</div>
+					</div>
+				</div>
+				</a>
+				<a href="https://www.youtube.com/watch?v=OTfp2_SwxHk&t=291s">
+				<div class="video-preview">
+					<div class="hp720-row">
+						<img class="hp720" src="channel-pictures/hqdefault.webp">  <!-- video cover -->
+						<div class="video-time">6:05</div>
+					</div>
+					<div class="video-info-grid">
+						<div class="channel-picture">
+							<img class="profile-picture" src="channel-pictures/unnamed2.jpg">
+						</div>
+						<div class="video-info">
+							<p class="video-title">If Programming Was An Anime 2</p>
+							<p class="video-author">Joma Tech</p>
+							<p class="video-stats">xx views &#183; xx years ago</p>
+						</div>
+					</div>
+				</div>
+				</a>
+			</section>
+		</main>
+	</body>
+</html>
